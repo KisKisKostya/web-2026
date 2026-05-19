@@ -1,0 +1,6 @@
+1) aeyrwbz jnhbcjdrb
+
+2) switch на match
+
+3) регулярные выражения для ам дата
+isnull + empty

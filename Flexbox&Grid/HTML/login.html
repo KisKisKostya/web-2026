@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/login.css">
+</head>
+<body>
+    <main class="authMain">
+        <div class="auth__greeting">
+            <div class="auth__greeting__text">Войти</div>
+            <div class="auth__greeting__image">
+                <img src="../src/images/registration.png" alt="registration">
+            </div>
+        </div>
+        <div class="authForm">
+            <form id="login-form">
+                <div class="authForm__field">
+                    <label class="authForm__field--label" for="email">Электропочта</label>
+                    <input type="email" id="email" class="auth__input">
+                    <div class="authForm__field--hint">Введите электропочту в формате *****@***.**</div>
+                </div>
+                <div class="authForm__field">
+                    <label class="authForm__field--label auth__label--password" for="password">Пароль</label>
+                    <input type="password" id="password" placeholder="········" class="auth__input auth__input_type_password">
+                    <button class="authForm__field--toogle" type="button" aria-label="Показать пароль">
+                        <img src="../src/images/Eye-off24.svg" alt="Eye-off">
+                    </button>
+                </div>
+                <button class="authForm__submit" type="submit">Продолжить</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

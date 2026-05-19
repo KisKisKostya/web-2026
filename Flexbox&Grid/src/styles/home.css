@@ -1,0 +1,90 @@
+body {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  justify-items: center;
+}
+
+.navigation {
+  padding-top: 40px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  width: 473px;
+}
+
+.postUser {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+.postUser__header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 16px;
+}
+
+.postUser__header--name {
+  flex-basis: 90%;
+  align-self: center;
+  font-family: Golos UI;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+}
+
+.postUser__like {
+  display: flex;
+  gap: 3px;
+  background-color: #2222220d;
+  width: 68px;
+  height: 30px;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.postUser__like--button {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.postUser__like--count {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+}
+
+.postUser__discription {
+  overflow-wrap: break-word;
+  font-family: Golos UI;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+}
+
+.postUser__discription--more {
+  height: 18px;
+  font-family: Golos UI;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+}
+
+.postUser__date {
+  font-family: Golos UI;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+}

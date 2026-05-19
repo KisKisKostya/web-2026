@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/login.css">
+    
+</head>
+<body>
+    <main class="auth__main">
+        <div class="auth__greeting">
+            <div class="auth__greeting-text">
+                <p class="auth__greeting-title">Войти</p>
+            </div>
+            <div class="auth__greeting-image">
+                <img src="../src/images/registration.png" alt="registration">
+            </div>
+        </div>
+        <div class="auth__form">
+            <form id="login-form">
+                <div class="auth__form-error">
+                    <span class="auth__error-text">🤓 Поля обязательные</span>
+                </div>
+                <div class="auth__field">
+                    <label class="auth__label" for="email">Электропочта</label>
+                    <input type="email" id="email" class="auth__input">
+                    <div class="auth__hint">Введите электропочту в формате *****@***.**</div>
+                </div>
+                <div class="auth__field">
+                    <label class="auth__label auth__label--password" for="password">Пароль</label>
+                    <input type="password" id="password" placeholder="········" class="auth__input auth__input_type_password">
+                    <button class="auth__toggle" type="button" aria-label="Показать пароль">
+                        <img src="../src/images/Eye-off 24.svg" alt="Eye-off">
+                    </button>
+                </div>
+                <button class="auth__submit" type="submit">Продолжить</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

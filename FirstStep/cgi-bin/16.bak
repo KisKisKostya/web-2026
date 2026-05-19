@@ -1,0 +1,37 @@
+PROGRAM HelloName(INPUT, OUTPUT);
+USES
+  DOS; { Для функции GetEnv }
+VAR
+  QueryString, Name: STRING;
+  PosName, PosAmp: INTEGER;
+BEGIN
+  { Получаем строку запроса }
+  QueryString := GetEnv('QUERY_STRING');
+
+  { Ищем подстроку 'name=' }
+  PosName := Pos('name=', QueryString);
+  IF PosName > 0 THEN
+    BEGIN
+      { Удаляем всё до конца 'name=', оставляем только значение }
+      Delete(QueryString, 1, PosName + 4); { +4 потому что 'name=' занимает 5 символов }
+      { Ищем разделитель '&' (если есть другие параметры) }
+      PosAmp := Pos('&', QueryString);
+      IF PosAmp > 0 THEN
+        Name := Copy(QueryString, 1, PosAmp - 1)
+      ELSE
+        Name := QueryString
+    END
+  ELSE
+    Name := ''; { Параметр отсутствует }
+
+  { Вывод HTTP-заголовков }
+  WRITELN('HTTP/1.1 200 OK');
+  WRITELN('Content-Type: text/plain');
+  WRITELN; { Пустая строка - обязательно! }
+
+  { Формируем приветствие }
+  IF Name <> '' THEN
+    WRITELN('Hello dear, ', Name, '!')
+  ELSE
+    WRITELN('Hello Anonymous!')
+END.
